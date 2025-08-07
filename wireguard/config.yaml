@@ -10,6 +10,7 @@ arch:
   - amd64
   - armv7
 init: false
+host_network: true
 ports:
   80/tcp: null
   51820/udp: 51820
