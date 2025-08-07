@@ -1,7 +1,7 @@
 ---
-name: WireGuard
+name: WireGuardB
 version: dev
-slug: wireguard
+slug: wireguardB
 description: Fast, modern, secure VPN tunnel
 url: https://github.com/hassio-addons/addon-wireguard
 codenotary: codenotary@frenck.dev
