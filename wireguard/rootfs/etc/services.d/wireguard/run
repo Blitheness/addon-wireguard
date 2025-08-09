@@ -19,5 +19,9 @@ if bashio::config.has_value "server.interface"; then
     interface=$(bashio::config "server.interface")
 fi
 
+# Ensure interface does not exist
+sudo ip link set "${interface}" down 2>/dev/null
+sudo ip link delete "${interface}" 2>/dev/null
+
 # Run the WireGuard
 exec wg-quick up "${interface}"
