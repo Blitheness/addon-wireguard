@@ -20,6 +20,7 @@ if bashio::config.has_value "server.interface"; then
 fi
 
 # Ensure interface does not exist
+bashio::log.info "Ensuring interface ${interface} does not exist"
 sudo ip link set "${interface}" down 2>/dev/null
 sudo ip link delete "${interface}" 2>/dev/null
 
